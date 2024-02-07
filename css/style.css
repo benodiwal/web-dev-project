@@ -1,0 +1,881 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Main Menu */
+.backgroundMainMenu {
+    display: flex; /*flex*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(92, 45, 213, 1);
+}
+
+.containerMainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: rgba(121, 69, 255, 1);
+    padding: 4rem;
+    border-radius: 2rem;
+    border: 0.15rem solid;
+    box-shadow: 0rem 0.5rem;
+}
+
+.logo {
+    width: 3rem;
+    margin-bottom: 4rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(15deg);
+}
+
+.button-long {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.5rem black;
+    border: 0.15rem solid black;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 1rem;
+}
+
+.button-long:hover {
+    box-shadow: 0rem 0.5rem rgba(92, 45, 213, 1);
+    border: 0.15rem solid rgba(92, 45, 213, 1);
+    cursor: pointer;
+}
+
+.button-pvscpu {
+    background-color: rgba(253, 102, 135, 1);
+    color: white;
+}
+
+.button-pvscpu img {
+    width: 3.5rem;
+}
+
+.button-pvsp {
+    background-color: rgba(255, 206, 103, 1);
+}
+
+.button-pvsp img {
+    width: 3.5rem;
+}
+
+@media screen and (max-width: 1161px) {
+    .containerMainMenu {
+        width: 40%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 871px) {
+    .containerMainMenu {
+        width: 50%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    .containerMainMenu {
+        width: 65%;
+        padding: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 536px) {
+    .containerMainMenu {
+        width: 85%;
+    }
+
+    .containerMainMenu {        
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    
+    .containerMainMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(92, 45, 213, 1);
+        padding: 0rem;
+        border-radius: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .button-pvsp,
+    .button-pvscpu {
+        width: 90%;
+    }
+
+    .button-rules {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 180px) {
+    .button-pvsp,
+    .button-pvscpu {
+        font-size: 10px;
+    }
+}
+/* Rules --------------------------------*/
+.backgroundRules {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(121, 69, 255, 1);
+}
+
+.containerRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 2rem;
+    border: 0.15rem solid;
+    box-shadow: 0rem 0.5rem;
+}
+
+.containerRules h1 {
+    align-self: center;
+    margin: 0 0 1rem 0;
+}
+
+.containerRules h3 {
+    color: rgba(121, 69, 255, 1);
+    margin: 0.2rem 0;
+}
+
+ol.rulesList {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    gap: 0.7rem;
+    list-style-type: none; 
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.rulesList span {
+    font-weight: bold;
+}
+
+.button-check {
+    width: 4rem;
+    align-self: center;
+    position: relative;
+    top: 2.3rem;
+}
+
+.button-check:hover {
+    cursor: pointer;
+}
+
+.button-check:hover svg #Oval-Copy-37,
+.button-check:hover svg #Oval-Copy-38 {
+    fill: rgba(92, 45, 213, 1);
+}
+
+@media screen and (max-width: 1161px) {
+    .containerRules {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 871px) {
+    .containerRules {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    .containerRules {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .containerRules {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .containerRules {
+        width: 95%;
+    }
+}
+
+/* Menu Start -------------------------------- */
+.backgroundIngameMenu {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.containerIngameMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: rgba(121, 69, 255, 1);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 0.15rem solid;
+    box-shadow: 0rem 0.5rem;
+}
+
+.containerIngameMenu h1 {
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+.button-continue,
+.button-restart,
+.button-quit {
+    justify-content: center;
+}
+
+.button-quit {
+    background-color: rgba(253, 102, 135, 1);
+}
+
+.button-quit h2 {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media screen and (max-width: 1161px) {
+    .containerIngameMenu {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 871px) {
+    .containerIngameMenu {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    .containerIngameMenu {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .containerIngameMenu {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    
+    .containerIngameMenu {
+        width: 95%;
+        padding: 0.5rem;
+    }
+
+    .button-pvsp {
+        width: 90%;
+    }
+
+    .button-rules {
+        width: 90%;
+    }
+}
+/* Game Board Start -------------------------------- */
+.backgroundGameBoardStart1 {
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(121, 69, 255, 1);
+}
+
+.backgroundGameBoardStart2 {
+    display: block;
+    background-color: rgba(92, 45, 213, 1);
+    width: 100%;
+    height: 20%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+}
+
+.containerGameBoardStart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    padding-top: 2rem;
+}
+
+.containerIngameMenu2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    margin-bottom: 1.5rem;
+}
+
+.button-ingame {
+    background-color: rgba(92, 45, 213, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    width: 30%;
+    height: 50%;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.button-ingame:hover {
+    background-color: rgba(253, 102, 135, 1);
+}
+
+.logoIngame {
+    width: 2.5rem;
+}
+
+.containerGameBoard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.containerMarkerBoardTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+    width: 80%;
+}
+
+.marker {
+    width: 1.5rem;
+    padding-bottom: 0;
+    position: absolute;
+}
+
+.marker-red {
+    display: none;
+}
+
+.marker-yellow {
+    display: none;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, 3rem);
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; 
+    z-index: 3;
+    background-color: white;
+    padding-bottom: 1.5rem;
+    padding-top: 0.7rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem;
+    border: 0.1rem solid black;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(7, 3rem);
+    gap: 0.5rem;
+}
+
+.stone1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(253, 102, 135, 1);
+}
+
+.stone2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 206, 103, 1);
+}
+
+@keyframes blink1 {
+    0% { background-color: rgba(253, 102, 135, 1); }
+    50% { background-color: white; }
+    100% { background-color: rgba(253, 102, 135, 1); }
+}
+
+.winningStone1 {
+    animation: blink1 1s infinite;
+}
+
+@keyframes blink2 {
+    0% { background-color: rgb(226, 178, 74); }
+    50% { background-color: white; }
+    100% { background-color: rgb(226, 178, 74); }
+}
+
+.winningStone2 {
+    animation: blink2 1s infinite;
+}
+
+.column {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 69, 255, 1);
+    box-shadow: 0rem -0.3rem;
+    border: 0.1rem solid black;
+  }
+
+.timeTurn {
+    background-color: rgba(253, 102, 135, 1);
+    border-top-right-radius: 4rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    border: 0.1rem solid black;
+    box-shadow: 0px 0.3rem black;
+    margin-top: -1rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    color: white;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .timeTurn h1 {
+    margin: 0;
+  }
+
+  .timeTurn h2 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .winner {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0.8rem;
+    width: 50%;
+    border-radius: 2rem;
+    z-index: 6;
+    border: 0.1rem solid black;
+    box-shadow: 0px 0.3rem black;
+    margin-top: -1rem;
+  }
+
+  .winner h1 {
+    margin: 0;
+  }
+
+  .winner h2 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .button-again {
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  
+.containerPlayerOne,
+.containerPlayerTwo {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.25rem;
+    padding: 0 0 1rem 0;
+    margin-bottom: 3rem;
+}
+
+.containerPlayerOne h2,
+.containerPlayerTwo h2 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.containerPlayerOne h3,
+.containerPlayerTwo h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+img.player-one,
+img.player-two {
+    width: 2rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+@media screen and (max-height: 595px) {
+    .timeTurn {
+        width: 60%;
+      }
+
+      .timeTurn h2 {
+        margin: 0;
+      }
+
+      .marker {
+        display: none;
+      }
+
+      .containerIngameMenu2 {
+        margin-bottom: 0;
+      }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .containerMarkerBoardTime {
+        width: 60%;
+    }
+
+    .winner {
+        width: 60%;
+    }
+
+    .timeTurn {
+        width: 50%;
+      }
+
+    .board {
+        grid-template-rows: repeat(6, 2.5rem);
+    }
+    
+    .row {
+        grid-template-columns: repeat(7, 2.5rem);
+    }
+    
+    .column {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+    .containerPlayerOne,
+    .containerPlayerTwo {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    
+    * {
+        font-size: 13px;
+    }
+
+    .containerIngameMenu2 {
+        margin-bottom: 2rem;
+        width: 75vw;
+    }
+
+    .containerGameBoard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        place-items: center;
+    }
+
+    .containerMarkerBoardTime{
+        order: 3;
+        grid-column: span 2;
+    }
+
+    .board {
+        grid-template-rows: repeat(6, 4rem);
+    }
+    
+    .row {
+        grid-template-columns: repeat(7, 4rem);
+    }
+    
+    .column {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+    .timeTurn {
+        margin-top: -1rem;
+        width: 50%;
+    }
+
+    .containerPlayerOne {
+        order: 0;
+        justify-self: end;
+    }
+
+
+    .containerPlayerTwo {
+        order: 1;
+        justify-self: start;
+    }
+
+    .containerPlayerOne,
+    .containerPlayerTwo {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 1);
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        border: 0.1rem solid;
+        border-radius: 1rem;
+        box-shadow: 0rem 0.25rem;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .marker {
+        display: none;
+    }
+
+    .containerPlayerOne h3 {
+        margin-right: 20%;
+        margin-left: -15%;
+    }
+
+    .containerPlayerTwo h3 {
+        order: 1;
+        margin-left: 20%;
+        margin-right: -15%;
+    }
+
+    img.player-one {
+        position: relative;
+        top: 0rem;
+        right: 23%;
+    }
+
+    img.player-two {
+        order: 3;
+        position: relative;
+        top: 0rem;
+        left: 23%;
+}
+}
+
+@media screen and (max-width: 769px) and (max-height: 671px) {
+    
+    * {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (min-height: 510px) {  
+    
+    * {
+        font-size: 16px;
+    }
+
+    .containerGameBoardStart{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-height: 1000px) {  
+    
+    * {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    * {
+        font-size: 15px;
+    }
+
+    .winner {
+        width: 80%;
+    }
+
+    .board {
+        grid-template-rows: repeat(6, 3rem);
+    }
+    
+    .row {
+        grid-template-columns: repeat(7, 3rem);
+    }
+    
+    .column {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .containerGameBoardStart{
+        padding-top: 0;
+    }
+
+    .containerPlayerOne h3 {
+        margin-right: 20%;
+        margin-left: -15%;
+        text-align: center;
+    }
+
+    .containerPlayerTwo h3 {
+        order: 1;
+        margin-left: 20%;
+        margin-right: -15%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    * {
+        font-size: 13px;
+    }
+
+    .backgroundGameBoardStart2 {
+        height: 25%;
+        border-top-left-radius: 4rem;
+        border-top-right-radius: 4rem;
+    }
+
+    .containerPlayerOne,
+    .containerPlayerTwo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        width: 65%;
+    }
+
+    .containerPlayerOne {
+        margin-right: 1rem;
+    }
+
+    .containerPlayerTwo {
+        margin-left: 1rem;
+    }
+
+    .containerPlayerOne h3 {
+        order: 0;
+        margin: 0;
+    }
+
+    .containerPlayerTwo h3 {
+        order: 0;
+        margin: 0;
+    }
+
+    img.player-one {
+        position: absolute;
+        top: 22%;
+        left: 8%;
+        width: 3.5rem;
+    }
+
+    img.player-two {
+        position: absolute;
+        top: 22%;
+        left: 80%;
+        width: 3.5rem;
+}
+
+}
+
+@media screen and (max-width: 350px) {
+
+    * {
+        font-size: 11px;
+    }
+    
+    img.player-one,
+    img.player-two {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    * {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 376px) and (max-height: 545px) {
+    
+    * {
+        font-size: 11px;
+    }
+    
+    img.player-one,
+    img.player-two {
+        display: none;
+    }
+}
