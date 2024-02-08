@@ -280,7 +280,6 @@ function isBoardFull() {
 
 
 
-// Funktion zum Suchen der nächsten freien Zeile in einer Spalte
 function findNextFreeRow(col) {
     for (let row = rows - 1; row >= 0; row--) {
         if (gameBoard[row][col] === null) {
@@ -290,9 +289,7 @@ function findNextFreeRow(col) {
     return -1;
 }
 
-// Funktion zum Starten des Timers
 function startTimer() {
-    // Überprüfe, ob der Timer bereits läuft
     if (!timerInterval) {
         timerInterval = setInterval(() => {
             currentPlayerTime--;
@@ -309,21 +306,18 @@ function startTimer() {
             timerElement.textContent = `${currentPlayerTime}s`;
 
             if (currentPlayerTime === 0) {
-                // Timer abgelaufen, wechsle zum nächsten Spieler
                 currentPlayer = currentPlayer === 1 ? 2 : 1;
                 currentPlayerTime = 30;
                 clearInterval(timerInterval);
-                timerInterval = null; // Setze timerInterval zurück
+                timerInterval = null;
                 startTimer();
                 displayBoard();
             }
-        }, 1000); // Intervall von 1 Sekunde
+        }, 1000);
     }
 }
 
-// Funktion zum Überprüfen, ob ein Spieler gewonnen hat
 function checkWin(player) {
-    // Überprüfe horizontale Linien
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col <= columns - 4; col++) {
             if (
@@ -341,7 +335,6 @@ function checkWin(player) {
         }
     }
 
-    // Überprüfe vertikale Linien
     for (let col = 0; col < columns; col++) {
         for (let row = 0; row <= rows - 4; row++) {
             if (
@@ -359,7 +352,6 @@ function checkWin(player) {
         }
     }
 
-    // Überprüfe diagonale Linien (von links oben nach rechts unten)
     for (let row = 0; row <= rows - 4; row++) {
         for (let col = 0; col <= columns - 4; col++) {
             if (
@@ -377,7 +369,6 @@ function checkWin(player) {
         }
     }
 
-    // Überprüfe diagonale Linien (von rechts oben nach links unten)
     for (let row = 0; row <= rows - 4; row++) {
         for (let col = 3; col < columns; col++) {
             if (
@@ -400,6 +391,5 @@ function checkWin(player) {
 
 
 
-// Starte den Timer für den ersten Spieler
 startTimer();
 displayBoard();
